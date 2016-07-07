@@ -17,5 +17,9 @@ public class Card implements Comparator<Card> {
 		
 		retrun card1Value - card2Value;	
 	}
+
+	public String toString() {
+		return pip + " of " + suit;
+	}
 	
 }
