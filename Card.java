@@ -8,14 +8,18 @@ public class Card  {
 		this.suit = suit;
 	}
 
-	public int compare(Card c1, Card c2) {
+	public String compare(Card c) {
 		String pipString = " A23456789TJQK";
 		String suitString = "CDHS";
-		card1Value = pipString.indexOf(c1.pip) + 13 * suitString.indexOf(c1.suit);
+		card1Value = pipString.indexOf(pip) + 13 * suitString.indexOf(suit);
 		
-		card2Value = pipString.indexOf(c2.pip) + 13 * suitString.indexOf(c2.suit);	
-		
-		retrun card1Value - card2Value;	
+		card2Value = pipString.indexOf(c.pip) + 13 * suitString.indexOf(c.suit);	
+		int difference = card1Value - card2Value;
+
+		if (difference < 0)
+			return "Card 2 is greater";
+ 		else
+			return "Card 1 is greater";	
 	}
 
 	public String toString() {
