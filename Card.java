@@ -11,9 +11,9 @@ public class Card  {
 	public String compare(Card c) {
 		String pipString = " A23456789TJQK";
 		String suitString = "CDHS";
-		card1Value = pipString.indexOf(pip) + 13 * suitString.indexOf(suit);
+		int card1Value = pipString.indexOf(pip) + 13 * suitString.indexOf(suit);
 		
-		card2Value = pipString.indexOf(c.pip) + 13 * suitString.indexOf(c.suit);	
+		int card2Value = pipString.indexOf(c.pip) + 13 * suitString.indexOf(c.suit);	
 		int difference = card1Value - card2Value;
 
 		if (difference < 0)
