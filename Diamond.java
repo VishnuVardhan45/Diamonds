@@ -1,13 +1,13 @@
 public class Diamond {
 
-	public static ArrayList<Integer> diamondCards() {
+	public static int diamondCards() {
 		String pipValues = " A23456789TJQK";
 		ArrayList<Integer> diamondCard = new ArrayList<Integer>();
 
 		for(int i = 1; i < pipValues.length(); i++) {
 			diamondCard.add((pipValues.indexOf(pipValues.charAt(i))));
 				}
-		return shuffleDiamonds(diamondCard);
+		return TopofStock(shuffleDiamonds(diamondCard));
 	}
 
 	public static ArrayList<Integer> shuffleDiamonds(ArrayList<Integer> s) {
@@ -15,4 +15,7 @@ public class Diamond {
 		return s;
 					
 		}
+	public static int TopofStock(ArrayList<Integer> tos) {
+					return tos.get(1);
+			}
 	}
