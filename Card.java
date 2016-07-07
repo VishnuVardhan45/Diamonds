@@ -1,5 +1,5 @@
 import java.util.*;
-public class Card implements Comparator<Card> {
+public class Card  {
 	char pip;
 	char suit;
 	
