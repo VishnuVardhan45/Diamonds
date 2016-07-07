@@ -2,8 +2,8 @@ import java.util.*;
 public class Player {
 	char suit;
 	ArrayList<Card>  available;
-	int valueAccumulated;
-
+	double score;
+	
 	Player(char suit) {
 		this.suit = suit; 
 		score = 0;
@@ -20,6 +20,14 @@ public class Player {
 		available.add(new Card('J', suit));
 		available.add(new Card('Q', suit));
 		available.add(new Card('K', suit));
+	}
+
+	public Card bid() {
+		return available.get(nextInt(available.size()));
+	}
+
+	public void updateScore(double newScore) {
+		score = newScore;	
 	}
 
 	
