@@ -1,39 +1,35 @@
 import java.util.*;
 public class DiamondGame {
 	ArrayList<Card> diamondCards;
-	Player computer;
-	Player user;
-	int topDiamondValue; 
+	int topDiamVal; 
 	
 	DiamondGame() {
 		diamondCards = new ArrayList<Integer>();
-		computer = new Player('S');
-		user = new Player('H');
 		String pipValues = "A23456789TJQK";
 		for(int i = 0; i < pipValues.length(); i++) {
-			diamondCard.add(new Card(pipValues.charAt(i),'D'));
+			diamondCards.add(new Card(pipValues.charAt(i),'D'));
 		}
 		Collections.shuffle(diamondCards);
+		topDiamVal = diamondCards.get(0).getPip();
 	}
 
 	public int  topOfStock() {
-		topDiamondValue = diamondCards.getPip();
+		topDiamVal = diamondCards.get(0).getPip();
 		diamondCards.remove(0); 		
-		return valOfDiam;
+		return topDiamVal;
 	}
 	
 	public void playRound(Player p1, Player p2) {
 		Card c1 = p1.bid();
 		Card c2 = p2.bid();		
-		int diffn = c1.compare(c2);	
-		 int valOfDiam = topOfStock();		
+		int diffn = c1.compare(c2);			
 		if (diffn < 0) 
-			p2.updateScore(valOfDiam);
+			p2.updateScore(topDiamVal);
 		else if (diffn > 0) 
-			p1.updateScore(valOfDiam);
+			p1.updateScore(topDiamVal);
 		else {
-			p1.updateScore(valOfDiam/2);
-			p2.updateScore(valOfDiam/2);
+			p1.updateScore(topDiamVal/2);
+			p2.updateScore(topDiamVal/2);
 		}
 	}
 }
