@@ -19,9 +19,9 @@ public class DiamondGame {
 		return topDiamVal;
 	}
 	
-	public void playRound(Player p1, Player p2) {
-		Card c1 = p1.bid();
-		Card c2 = p2.bid();		
+	public void playRound(Player p1, Player p2,int bid1,int bid2) {
+		Card c1 = p1.bid(bid1);
+		Card c2 = p2.bid(bid2);		
 		int diffn = c1.compare(c2);			
 		if (diffn < 0) 
 			p2.updateScore(topDiamVal);

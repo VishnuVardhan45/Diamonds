@@ -1,3 +1,4 @@
+import java.util.*;
 public class Diamond {
 
 	public static int diamondCards() {
