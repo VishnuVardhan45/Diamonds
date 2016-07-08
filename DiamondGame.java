@@ -4,7 +4,7 @@ public class DiamondGame {
 	int topDiamVal; 
 	
 	DiamondGame() {
-		diamondCards = new ArrayList<Integer>();
+		diamondCards = new ArrayList<Card>();
 		String pipValues = "A23456789TJQK";
 		for(int i = 0; i < pipValues.length(); i++) {
 			diamondCards.add(new Card(pipValues.charAt(i),'D'));
