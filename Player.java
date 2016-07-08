@@ -11,7 +11,7 @@ public class Player {
 		availableCards = new ArrayList<>();
 		String pipValues = "A23456789JQK";		
 		for (int i = 0; i < pipValues.length(); i++) {
-			availableCards.add(new Card(pipValues.charAt(i), suit);
+			availableCards.add(new Card(pipValues.charAt(i), suit));
 		}
 	}
 
