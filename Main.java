@@ -23,7 +23,12 @@ public class Main  {
 	public static void main() {
 		Main game = new Main();
 		game.play();
-		System.out.println("Computer Score: " + game.computer.score);
-		System.out.println("Computer Score: " + game.user.score);
+		if(game.computer.score > game.user.score) {
+			System.out.prinln("computer won");
+		}
+		else {
+			System.out.println("user won");
+		}
+		
 	}
 }
