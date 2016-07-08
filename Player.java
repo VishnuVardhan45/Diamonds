@@ -14,7 +14,10 @@ public class Player {
 		String pipValues = "A23456789JQK";		
 		for (int i = 0; i < pipValues.length(); i++) {
 			availableCards.add(new Card(pipValues.charAt(i), suit));
+<<<<<<< HEAD
+=======
 			trackOpponent.add(new Card(pipValues.charAt(i), suit));
+>>>>>>> b7bd19cf8c2c09af4723faf71b129e55dfe87281
 		}
 	}
 

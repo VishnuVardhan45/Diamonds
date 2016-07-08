@@ -13,6 +13,9 @@ public class Main  {
 		int computerBid;
 		int userBid;
 		Scanner sc = new Scanner(System.in);
+
+		Diamond game = new Diamond();
+		int userBid, computerBid;
 		for (int i = 0; i < 13; i++) {
 			int topDiam = game.topOfStock();
 			System.out.println(topDiam);
