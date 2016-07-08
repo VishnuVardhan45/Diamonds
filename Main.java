@@ -9,7 +9,7 @@ public class Main  {
 	}
 
 	public void play() {
-		DiamondGame game = new DiamondGame();
+		Diamond game = new Diamond();
 		int userBid, computerBid;
 		for (int i = 0; i < 13; i++) {
 			System.out.println(game.topOfStock());
