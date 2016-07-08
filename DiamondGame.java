@@ -3,6 +3,7 @@ public class DiamondGame {
 	ArrayList<Card> diamondCards;
 	Player computer;
 	Player user;
+	int topDiamondValue; 
 	
 	DiamondGame() {
 		diamondCards = new ArrayList<Integer>();
@@ -15,17 +16,17 @@ public class DiamondGame {
 		Collections.shuffle(diamondCards);
 	}
 
-	public Card topOfStock() {
-		Card c = diamondCards.get(0);
+	public int  topOfStock() {
+		topDiamondValue = diamondCards.getPip();
 		diamondCards.remove(0); 		
-		return c;
+		return valOfDiam;
 	}
 	
-	public playRound(Player p1, Player p2) {
+	public void playRound(Player p1, Player p2) {
 		Card c1 = p1.bid();
 		Card c2 = p2.bid();		
 		int diffn = c1.compare(c2);	
-		int valOfDiam = topOfStock().getPip();		
+		 int valOfDiam = topOfStock();		
 		if (diffn < 0) 
 			p2.updateScore(valOfDiam);
 		else if (diffn > 0) 
