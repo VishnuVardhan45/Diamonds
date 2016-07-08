@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Random;
+
 public class Player {
 	char suit;
 	ArrayList<Card>  availableCards;
@@ -11,21 +11,17 @@ public class Player {
 		score = 0;
 		availableCards = new ArrayList<>();
 		trackOpponent = new ArrayList<>();
-		String pipValues = "A23456789JQK";		
+		String pipValues = "A23456789TJQK";		
 		for (int i = 0; i < pipValues.length(); i++) {
 			availableCards.add(new Card(pipValues.charAt(i), suit));
-<<<<<<< HEAD
-=======
 			trackOpponent.add(new Card(pipValues.charAt(i), suit));
->>>>>>> b7bd19cf8c2c09af4723faf71b129e55dfe87281
 		}
 	}
 
 	public Card bid(int pip) {
-		int index = pip;;
-		Card bidding = availableCards.get(index);
-		availableCards.remove(index);
-		return bidding;
+		//Card bidding = availableCards.get(availableCards.indexOf(new Card(" A123456789TJQK".charAt(pip), suit)));
+		availableCards.remove(new Card(" A123456789TJQK".charAt(pip), suit));
+		return new Card(" A123456789TJQK".charAt(pip), suit);
 	}
 
 	public void updateScore(double newScore) {
@@ -33,6 +29,7 @@ public class Player {
 	}	
 
 	public int strategy(int topDiamVal) {
+		
 		return topDiamVal;
 	}
 }
