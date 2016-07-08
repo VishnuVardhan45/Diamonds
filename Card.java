@@ -1,7 +1,7 @@
 import java.util.*;
 public class Card  {
 	char pip;
-	String suit;
+	char suit;
 	
 	public Card(char pip, String suit) {
 		this.pip = pip;
@@ -16,7 +16,7 @@ public class Card  {
 		String pipString = " A23456789TJQK";
 		return pipString.indexOf(pip);
 	}
-        public String getSuit() {
+        public char getSuit() {
 		
 		return suit;
 	} 
