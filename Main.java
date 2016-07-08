@@ -13,35 +13,35 @@ public class Main  {
 		int computerBid;
 		int userBid;
 		Scanner sc = new Scanner(System.in);
-
-		Diamond game = new Diamond();
-		int userBid, computerBid;
 		for (int i = 0; i < 13; i++) {
 			int topDiam = game.topOfStock();
 			System.out.println(topDiam);
 			computerBid = computer.strategy(topDiam);			
 			userBid = sc.nextInt();
-			while (!isValid(userBid)))) {
+			while (!isValid(userBid)) {
 				System.out.println("Already played that card. Bid again");
-				userBid = sc.next().charAt(0);
+				userBid = sc.nextInt();
 			}
-			game.playRound(computer, user, computerBid, " A23456789TJQK".indexOf(userBid));
-			computer.trackOpponent.remove(trackOpponent.get());
-		}
-		
-		
+			game.playRound(computer, user, computerBid, userBid);
+			computer.trackOpponent.remove(new Card(" A23456789TJQK".charAt(userBid), user.suit));
+		}	
 	}
-
-	public boolean isValid()
+	
+	public boolean isValid(int pip) {
+		for (Card c : user.availableCards) {
+			if (c.pip == pip)
+				return false;
+		}
+		return true;
+	}
+	
 	public static void main(String[] args) {
 		Main game = new Main();
 		game.play();
-		if(game.computer.score > game.user.score) {
+		if (game.computer.score > game.user.score) {
 			System.out.println("computer won");
-		}
-		else {
+		} else {
 			System.out.println("user won");
-		}
-		
+		}	
 	}
 }
