@@ -1,29 +1,25 @@
 import java.util.*;
 public class Card  {
 	char pip;
-	char suit;
+	String suit;
 	
-	public Card(char pip, char suit) {
+	public Card(char pip, String suit) {
 		this.pip = pip;
 		this.suit = suit;
 	}
 
-	public String compare(Card c) {
+	public int compare(Card c) {
+		return  getPip() - c.getPip();
+	}
+
+	public int getPip() {
 		String pipString = " A23456789TJQK";
-		String suitString = "CDHS";
-		int card1Value = pipString.indexOf(pip) + 13 * suitString.indexOf(suit);
+		return pipString.indexOf(pip);
+	}
+        public String getSuit() {
 		
-		int card2Value = pipString.indexOf(c.pip) + 13 * suitString.indexOf(c.suit);	
-		int difference = card1Value - card2Value;
-
-		if (difference < 0)
-			return "Card 2 is greater";
- 		else
-			return "Card 1 is greater";	
-	}
-
-	public String toString() {
-		return pip + " of " + suit;
-	}
+		return suit;
+	} 
+         
 	
 }

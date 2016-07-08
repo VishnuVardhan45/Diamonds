@@ -3,7 +3,7 @@ import java.util.Random;
 public class Player {
 	char suit;
 	ArrayList<Card>  availableCards;
-	int score;
+	double score;
 
 	Player(char suit) {
 		this.suit = suit; 
@@ -31,4 +31,8 @@ public class Player {
 		availableCards.remove(index);
 		return bidding;
 	}
+
+	public void updateScore(double newScore) {
+		score = newScore;	
+	}	
 }
