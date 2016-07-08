@@ -15,7 +15,7 @@ public class Driver {
 			System.out.println(game.topOfStock());
 			computerBid = computer.strategy();			
 			userBid = sc.nextInt();
-			
+			playRound(computer, user, computerBid, userBid);
 		}
 	}
 	public static void main() {
