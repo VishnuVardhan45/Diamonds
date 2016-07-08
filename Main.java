@@ -15,7 +15,12 @@ public class Main  {
 			System.out.println(game.topOfStock());
 			computerBid = computer.strategy();			
 			userBid = sc.nextInt();
+			while (!user.availableCards.contains(userBid)) {
+				System.out.pritnln("Already played that card. Bid again");
+				userBid = sc.nextInt();
+			}
 			playRound(computer, user, computerBid, userBid);
+			computer.trackOpponent.remove(new Card(userBid, user.suit));
 		}
 		
 		
