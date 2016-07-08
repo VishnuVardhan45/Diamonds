@@ -15,15 +15,14 @@ public class Player {
 		}
 	}
 
-	public Card bid() {
-		Random r = new Random();
-		int index = r.nextInt(availableCards.size());
+	public Card bid(int pip) {
+		int index = pip;;
 		Card bidding = availableCards.get(index);
 		availableCards.remove(index);
 		return bidding;
 	}
 
 	public void updateScore(double newScore) {
-		score = newScore;	
+		score += newScore;	
 	}	
 }
