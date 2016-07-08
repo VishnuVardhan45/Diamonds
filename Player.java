@@ -9,19 +9,10 @@ public class Player {
 		this.suit = suit; 
 		score = 0;
 		availableCards = new ArrayList<>();
-		availableCards.add(new Card('A',suit));
-		availableCards.add(new Card('2',suit));
-		availableCards.add(new Card('3',suit));
-		availableCards.add(new Card('4',suit));
-		availableCards.add(new Card('5',suit));
-		availableCards.add(new Card('6',suit));
-		availableCards.add(new Card('7',suit));
-		availableCards.add(new Card('8',suit));
-		availableCards.add(new Card('9',suit));
-		availableCards.add(new Card('T',suit));
-		availableCards.add(new Card('J',suit));
-		availableCards.add(new Card('Q',suit));
-		availableCards.add(new Card('K',suit));		
+		String pipValues = "A23456789JQK";		
+		for (int i = 0; i < pipValues.length(); i++) {
+			availableCards.add(new Card(pipValues.charAt(i), suit);
+		}
 	}
 
 	public Card bid() {
