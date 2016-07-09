@@ -35,13 +35,5 @@ public class Main  {
 		return true;
 	}
 	
-	public static void main(String[] args) {
-		Main game = new Main();
-		game.play();
-		if (game.computer.score > game.user.score) {
-			System.out.println("computer won");
-		} else {
-			System.out.println("user won");
-		}	
-	}
+	
 }
